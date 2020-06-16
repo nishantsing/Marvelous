@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: black;">      
+    <div id="start">
+        <img src="marvel.png" id="mimg" height="100px">
+    </div>
+    
+    <div class="jumbotron">
+        <div>
+            <form id="ipform">
+                <b>Name: </b><input type="text" id="name" placeholder="Ex. Spider-man">&nbsp;
+                <b>NameStartsWith: </b><input type="text" id="nameStartsWith" placeholder="Ex. iron">&nbsp;
+                <input type="submit" class="btn btn-light" onclick="return func()">&nbsp;
+                <input type="reset" class="btn btn-light">&nbsp;                          
+            </form>
+
+            <form id="mynav" title="Skip the specified number of records in the result set. Total = 1493">
+                <b>Offset: </b><input type="number" id="offnum" min="0" max="1492" placeholder="0 - 1492">&nbsp;
+                <input type="submit" class="btn btn-light" value="✔" onclick="return getoff()">&nbsp;
+                <input type="reset" class="btn btn-light" value="❌">&nbsp;                          
+            </form>     
+
+            <br>
+            <div class="spinner-border text-danger" id="loading" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>        
+        <br>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>                    
+                    <th scope="col">Id</th>
+                    <th scope="col">Character Name</th>
+                    <th scope="col" style="text-align: right;">Thumbnail</th>                    
+                </tr>
+            </thead>
+            <tbody id="pote">
+                
+            </tbody>
+        </table>        
+    </div> 
+
+    <button class="btn btn-light scroll-top btn-lg" data-scroll="up" type="button">
+      <b>⬆️</b>
+    </button>
+    <div class="spinner-border text-danger" id="loading" role="status">
+        <span class="sr-only"></span>
+    </div>
+    <p></p>
+
+    <script src="script.js"></script>
+</body> 
+</html>

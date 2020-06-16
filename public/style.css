@@ -1,0 +1,27 @@
+#start{
+    background-color: black;
+}
+
+#mimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=submit], input[type=reset]{
+    font-weight:bold;
+}
+
+#loading{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ipform{
+    display: inline-block;
+}
+
+#mynav{
+    display: inline-block;
+    float: right;
+}
