@@ -25,3 +25,17 @@ input[type=submit], input[type=reset]{
     display: inline-block;
     float: right;
 }
+
+#blow1{
+    display: inline-block;
+}
+
+#blow2{
+    float:right;
+    display: inline-block;
+}
+
+#cites{
+    color: whitesmoke;
+    text-align: center;
+}
