@@ -6,20 +6,24 @@ async function generateURL(){
 const res = await fetch('/api');
 const data = await res.json();
 
- return url =
-  `http://gateway.marvel.com:80/v1/public/characters?ts=${data.ts}&apikey=${PUBLIC_KEY}&hash=${data.hash}&limit=${limit}`;
-  console.log(url);
+//  return url =
+//   `http://gateway.marvel.com:80/v1/public/characters?ts=${data.ts}&apikey=${PUBLIC_KEY}&hash=${data.hash}&limit=${limit}`;
+//   console.log(url);
 
 }
-
-
 const tbody = document.getElementById("pote");
 const loading = document.getElementById("loading");
 var limit = 20;
 var offset = 0;
+var url =
+  `http://gateway.marvel.com:80/v1/public/characters?&apikey=${PUBLIC_KEY}&limit=${limit}`;
+
+
+
+
 
 $(document).ready(async function () {
-   url = await generateURL();
+  //  url = await generateURL();
   console.log(url);
    loading.style.display = "none";
 getData(url);
