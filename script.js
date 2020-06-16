@@ -14,8 +14,7 @@ var url =
 
 
 $(document).ready(async function () {
-   url = await generateURL();
-  // console.log(url);
+   
    loading.style.display = "none";
 getData(url);
    
