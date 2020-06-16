@@ -7,7 +7,7 @@ var limit = 20;
 var offset = 0;
 
 var url =
-  `https://gateway.marvel.com:80/v1/public/characters?&apikey=${PUBLIC_KEY}&limit=${limit}`;
+  `http://gateway.marvel.com:80/v1/public/characters?&apikey=${PUBLIC_KEY}&limit=${limit}`;
 
 
 
