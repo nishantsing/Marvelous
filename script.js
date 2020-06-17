@@ -97,7 +97,7 @@ async function getData(url, x=false) {
   const res = await fetch(url);
   const data = await res.json();
   loading.style.display = "none";
-  console.log(data.data);
+  // console.log(data.data);
   const op = data.data.results;
   total = data.data.total;
   op.forEach((curr_op) => {
@@ -152,7 +152,7 @@ async function getData(url, x=false) {
       <td><img src="${img}.${ext}" width="100 px" height="100" alt="NA" align="right"></td>
     </tr>`
     
-    console.log(id, name);
+    // console.log(id, name);
   });
 }
 
