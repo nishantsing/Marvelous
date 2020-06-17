@@ -1,8 +1,9 @@
 const PUBLIC_KEY="b8ac975be0765c9e5b197e765a6bd72c";
 const tbody = document.getElementById("pote");
 const loading = document.getElementById("loading");
-var limit = 20
+var limit = 10
 var offset = 0 
+var total;
 var name;
 var nameStartsWith;
 
@@ -28,22 +29,25 @@ $(window).scroll(function() {
     nameStartsWith = document.getElementById('nameStartsWith').value;
     var lurl;
     // console.log(name, nameStartsWith);
+	offset+=limit;
 
-    if(name === '' && nameStartsWith !==''){      
-      offset+=limit;
-      lurl = `${url}&nameStartsWith=${nameStartsWith}&offset=${offset}`; 
-    }else if(name !== '' && nameStartsWith=== ''){
-      offset+=limit;
-      lurl = `${url}&name=${name}&offset=${offset}`;
-    }else if(name !== '' && nameStartsWith !== ''){
-      offset+=limit;
-      lurl = `${url}&name=${name}&nameStartsWith=${nameStartsWith}&offset=${offset}`;
-    }else{
-      offset+=limit;
-      lurl = `${url}&offset=${offset}`;
-    }
-    
-    getData(lurl, true);           
+    if(offset<total){
+      if(name === '' && nameStartsWith !==''){      
+        // offset+=limit;
+        lurl = `${url}&nameStartsWith=${nameStartsWith}&offset=${offset}`; 
+      }else if(name !== '' && nameStartsWith=== ''){
+        // offset+=limit;
+        lurl = `${url}&name=${name}&offset=${offset}`;
+      }else if(name !== '' && nameStartsWith !== ''){
+        // offset+=limit;
+        lurl = `${url}&name=${name}&nameStartsWith=${nameStartsWith}&offset=${offset}`;
+      }else{
+        // offset+=limit;
+        lurl = `${url}&offset=${offset}`;
+      }
+      
+      getData(lurl, true);  
+    }                       
   }
 });
 
@@ -95,6 +99,7 @@ async function getData(url, x=false) {
   loading.style.display = "none";
   console.log(data.data);
   const op = data.data.results;
+  total = data.data.total;
   op.forEach((curr_op) => {
     const id = curr_op.id;
     const name = curr_op.name;
