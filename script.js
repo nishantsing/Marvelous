@@ -23,7 +23,7 @@ $('.scroll-top').click(function () {
 });
 
 $(window).scroll(function() {                    
-  if($(window).scrollTop() == $(document).height() - $(window).height()) {
+  if($(window).scrollTop() > $(document).height() - $(window).height()-100) {
     name = document.getElementById('name').value;
     nameStartsWith = document.getElementById('nameStartsWith').value;
     var lurl;
