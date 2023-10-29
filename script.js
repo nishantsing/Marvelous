@@ -9,7 +9,7 @@ var nameStartsWith;
 
 
 var url =
-  `https://gateway.marvel.com:80/v1/public/characters?&apikey=${PUBLIC_KEY}&limit=${limit}`;
+  `https://gateway.marvel.com/v1/public/characters?apikey=${PUBLIC_KEY}&limit=${limit}`;
   
 $( document ).ready(function() {
   loading.style.display = "none";
