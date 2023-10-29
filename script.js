@@ -1,4 +1,4 @@
-const PUBLIC_KEY="b8ac975be0765c9e5b197e765a6bd72c";
+const PUBLIC_KEY="ac5f0383458f4d871eb256acf900166d";
 const tbody = document.getElementById("pote");
 const loading = document.getElementById("loading");
 var limit = 10
@@ -9,7 +9,7 @@ var nameStartsWith;
 
 
 var url =
-  `http://gateway.marvel.com:80/v1/public/characters?&apikey=${PUBLIC_KEY}&limit=${limit}`;
+  `https://gateway.marvel.com:80/v1/public/characters?&apikey=${PUBLIC_KEY}&limit=${limit}`;
   
 $( document ).ready(function() {
   loading.style.display = "none";
