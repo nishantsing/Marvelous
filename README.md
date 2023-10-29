@@ -13,4 +13,4 @@ There is 2 ways of calling the marvel API
 #### Usage
 This is the localhost version where you require both pubic as well as private key to run it on localhost.
 
-###### Try Now : [Marvelo]https://marvel.xarvis.tech/
+###### Try Now : [Marvelo](https://marvel.xarvis.tech/)
